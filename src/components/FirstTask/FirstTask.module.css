@@ -1,0 +1,95 @@
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.6rem;
+    background-color: #71a5c7;
+    font: normal normal 1.6rem/1 Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.box {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    min-height: 10rem;
+    padding: 1.2rem;
+    background-color: #e4e4e4;
+    text-align: left;
+}
+
+.colPic {
+    max-width: 5.2rem;
+    height: auto;
+    border: 0.2rem solid #83d9ff;
+    border-radius: 50%;
+    font-size: 0;
+    overflow: hidden;
+
+}
+
+.colPic > img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.colMsg {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-width: 30.4rem;
+    max-width: 32rem;
+    padding-left: 1.2rem;
+    overflow: hidden;
+}
+
+.mountMsg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-width: 29.6rem;
+    min-height: 7.8rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.8rem 0.8rem 0.8rem 0;
+    background-color: rgba(131, 217, 255, 0.8);
+
+}
+.mountMsg::before {
+    content: '';
+    position: absolute;
+    left: -0.8rem;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 0.8rem solid rgba(131, 217, 255, 0.8);
+    border-left: 0.8rem solid transparent;
+}
+
+.userName {
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+}
+
+.msg {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #f2f2f2;
+}
+
+.boxDate {
+    align-self: flex-end;
+    padding-top: 0.4rem;
+}
+.boxDate > span {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.5);
+}
