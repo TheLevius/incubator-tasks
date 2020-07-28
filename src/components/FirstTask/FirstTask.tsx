@@ -3,13 +3,9 @@ import styles from './FirstTask.module.css';
 import avatar from './../../assets/images/jpg/valakas.jpg';
 import {UsersType, UserType} from '../../types/entities';
 
-export const FirstTask = () => {
+export const FirstTask = (props: any) => {
+    let [users, setUsers] = useState<UsersType>(props.state.users)
 
-    let [users, setUsers] = useState<UsersType>(
-        [
-            {id: 1, name: 'Artem', date: '20:00', msg: 'npm start нажимал?'}
-        ]
-    );
     const user = users[0];
     return (
         <div className={styles.wrap}>
