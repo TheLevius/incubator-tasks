@@ -4,6 +4,7 @@ import avatar from './../../assets/images/jpg/valakas.jpg';
 import {UsersType, UserType} from '../../types/entities';
 
 export const FirstTask = (props: any) => {
+
     let [users, setUsers] = useState<UsersType>(props.state.users)
 
     const user = users[0];

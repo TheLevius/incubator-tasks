@@ -1,0 +1,52 @@
+.wrap {
+    background-color: #83d9ff;
+    text-align: center;
+    color: #fff;
+}
+.col {
+    display: inline-block;
+    text-align: left;
+}
+.myTasksList {
+    display: inline-block;
+    padding: 1.6rem 0.8rem 0;
+}
+
+.myTask {
+    font: normal normal 1.6rem/2 Roboto, Helvetiva, Arial, sans-serif;
+    list-style: decimal inside;
+    color: #fff;
+    letter-spacing: 0.05rem;
+}
+.myTask > span {
+    font: normal 300 1.6rem/1 Roboto, Helvetiva, Arial, sans-serif;
+}
+
+.filterTasksColumn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0.8rem;
+}
+
+.filterTasksColumn h5 {
+    flex-basis: 100%;
+    font: normal 500 2rem/1.5 Roboto, Helvetica, Arial, sans-serif;
+}
+
+.filterTasksColumn > button {
+    flex-basis: 8.8rem;
+    margin-right: 1.6rem;
+    font: normal 400 1.6rem/1.5 Roboto, Helvetica, Arial, sans-serif;
+    color: rgba(82, 117, 156, 0.75);
+    cursor: pointer
+}
+.filterTasksColumn > button:last-child {
+    margin-right: 0;
+}
+
+.filterTasksColumn > button.active {
+    font-weight: 500;
+    color: #fff;
+    color: rgba(82, 117, 156, 1)
+}

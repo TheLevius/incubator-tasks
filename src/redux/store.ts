@@ -3,11 +3,11 @@ import firstTaskReducer from './firstTaskReducer';
 import secondTaskReducer from './secondTaskReducer';
 
 export const rootReducer = combineReducers({
-    firstTaskReducer,
-    secondTaskReducer
+    firstTaskReducer: firstTaskReducer,
+    secondTaskReducer:secondTaskReducer
 });
 
-export type RootStateType = ReturnType<typeof rootReducer>
+export type AppStateType = ReturnType<typeof rootReducer>
 
 export const store = createStore(rootReducer);
 
