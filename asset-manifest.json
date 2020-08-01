@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/incubator-tasks/static/css/main.47a28dcb.chunk.css",
+    "main.css": "/incubator-tasks/static/css/main.7eeee7c7.chunk.css",
     "main.js": "/incubator-tasks/static/js/main.a125db9f.chunk.js",
     "main.js.map": "/incubator-tasks/static/js/main.a125db9f.chunk.js.map",
     "runtime-main.js": "/incubator-tasks/static/js/runtime-main.6b9928e8.js",
@@ -8,16 +8,16 @@
     "static/js/2.ca28f37c.chunk.js": "/incubator-tasks/static/js/2.ca28f37c.chunk.js",
     "static/js/2.ca28f37c.chunk.js.map": "/incubator-tasks/static/js/2.ca28f37c.chunk.js.map",
     "index.html": "/incubator-tasks/index.html",
-    "precache-manifest.78ac3a2cf94c12c525218cccfa1d9309.js": "/incubator-tasks/precache-manifest.78ac3a2cf94c12c525218cccfa1d9309.js",
+    "precache-manifest.fe5d76e13572009c326f73a0e4487adc.js": "/incubator-tasks/precache-manifest.fe5d76e13572009c326f73a0e4487adc.js",
     "service-worker.js": "/incubator-tasks/service-worker.js",
-    "static/css/main.47a28dcb.chunk.css.map": "/incubator-tasks/static/css/main.47a28dcb.chunk.css.map",
+    "static/css/main.7eeee7c7.chunk.css.map": "/incubator-tasks/static/css/main.7eeee7c7.chunk.css.map",
     "static/js/2.ca28f37c.chunk.js.LICENSE.txt": "/incubator-tasks/static/js/2.ca28f37c.chunk.js.LICENSE.txt",
     "static/media/valakas.jpg": "/incubator-tasks/static/media/valakas.a8967f9d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6b9928e8.js",
     "static/js/2.ca28f37c.chunk.js",
-    "static/css/main.47a28dcb.chunk.css",
+    "static/css/main.7eeee7c7.chunk.css",
     "static/js/main.a125db9f.chunk.js"
   ]
 }
