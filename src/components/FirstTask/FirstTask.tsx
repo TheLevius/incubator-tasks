@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import styles from './FirstTask.module.css';
 import avatar from './../../assets/images/jpg/valakas.jpg';
-import {UsersType, UserType} from '../../types/entities';
+import {useSelector} from 'react-redux';
+import {AppStateType} from '../../redux/store';
 
-export const FirstTask = (props: any) => {
+export const FirstTask = () => {
 
-    let [users, setUsers] = useState<UsersType>(props.state.users)
+
+    const users = useSelector((state:AppStateType) => state.firstTaskReducer.users)
 
     const user = users[0];
     return (

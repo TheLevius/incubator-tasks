@@ -36,10 +36,10 @@ const SecondTask = (props: any) => {
         dispatch(filterButtonIsActiveAC(priority))
     }
 
-    let MyFilterButtons = priorityFilters.map((b:any) => {
+    let MyFilterButtons = priorityFilters.map((b:any, index: number) => {
         return b.isActive
-            ? <button onClick={() => onFilterBtnClick(b.priority)} className={styles.active}>{b.priority}</button>
-            : <button onClick={() => onFilterBtnClick(b.priority)}>{b.priority}</button>
+            ? <button key={index} onClick={() => onFilterBtnClick(b.priority)} className={styles.active}>{b.priority}</button>
+            : <button key={index} onClick={() => onFilterBtnClick(b.priority)}>{b.priority}</button>
     });
 
 

@@ -1,10 +1,12 @@
 import {combineReducers, createStore} from 'redux';
 import firstTaskReducer from './firstTaskReducer';
 import secondTaskReducer from './secondTaskReducer';
+import thirdTaskReducer from './thirdTaskReducer';
 
 export const rootReducer = combineReducers({
-    firstTaskReducer: firstTaskReducer,
-    secondTaskReducer:secondTaskReducer
+    firstTaskReducer,
+    secondTaskReducer,
+    thirdTaskReducer
 });
 
 export type AppStateType = ReturnType<typeof rootReducer>

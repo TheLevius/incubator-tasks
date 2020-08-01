@@ -1,0 +1,36 @@
+.wrap {
+    padding: 1.6rem;
+    background-color: #71a5c7;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.col {
+    max-width: 20%;
+    margin: 0 auto;
+}
+
+.inputName {
+    display: inline-block;
+    width: calc(80% - 1.2rem);
+    margin-right: 1.2rem;
+    padding: 0.8rem;
+    box-sizing: border-box;
+}
+
+.btnNameEnter {
+    display: inline-block;
+    width: 20%;
+    margin: 0;
+    padding: 0.8rem;
+}
+
+.namesBox {
+    padding-top: 0.8rem;
+}
+
+.namesBox > span {
+    display: inline-block;
+    padding: 0.4rem 0.8rem 0;
+}
