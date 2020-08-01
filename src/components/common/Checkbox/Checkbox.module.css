@@ -1,0 +1,54 @@
+.switchWrap {
+
+}
+
+.switch {
+    display: none;
+}
+.switch + label {
+    cursor: pointer;
+    position: relative;
+    font-family: tahoma, sans-serif, arial;
+    line-height: 3.2rem;
+    padding-left: 5.2rem;
+}
+.switch + label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+    padding: 0;
+    height: 2rem;
+    width: 4rem;
+    margin: 0 5px 0 0;
+    border: 1px solid #dadada;
+    border-radius: 1.2rem;
+    background: #dddddd;
+}
+.switch + label::before,
+.switch + label::after {
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.switch + label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 2.2rem;
+    background: #fff;
+    border: 1px solid #dadada;
+    box-shadow: 0 0.4rem 0.4rem rgba(140, 140, 140, 0.1);
+}
+.switch:checked + label::before {
+    background: #6edc5f;
+    border-color: #dddddd;
+}
+.switch:checked + label::after {
+    left: 2.1rem;
+}

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import styles from './SecondTask.module.css';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteTaskAC, filterButtonIsActiveAC} from '../../redux/secondTaskReducer';

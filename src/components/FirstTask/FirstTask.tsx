@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './FirstTask.module.css';
 import avatar from './../../assets/images/jpg/valakas.jpg';
 import {useSelector} from 'react-redux';
