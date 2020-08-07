@@ -5,10 +5,9 @@ import {AppStateType} from '../../redux/store';
 import { setNameAC } from '../../redux/thirdTaskReducer';
 import Button from '../common/Button/Button';
 import InputText from '../common/Input/InputText';
-import Checkbox from '../common/Checkbox/Checkbox';
+
 
 const ThirdTask = () => {
-
 
     const dispatch = useDispatch();
 
@@ -29,6 +28,7 @@ const ThirdTask = () => {
         } else {
             alert(`Name is empty!`)
         }
+
         setName('')
     }
 
@@ -36,24 +36,28 @@ const ThirdTask = () => {
 
     return <div className={styles.wrap}>
             <div className={styles.col}>
-                <input type='text'
-                       value={name}
-                       onChange={(e:ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
-                       onKeyPress={(e) => { e.charCode === 13 && onBtnInsertNameClick() }}
-                       className={styles.inputName}
+
+                <InputText name={'inputText'}
+                           value={name}
+                           placeholder={'Введите текст'}
+                           id={'inputText1'}
+                           classProps={`${styles.inputName}`}
+                           onKeyPress={(e:React.KeyboardEvent<HTMLInputElement>) => { e.charCode === 13 && onBtnInsertNameClick() }}
+                           onChange={(e:React.ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
+
                 />
-                <button className={styles.btnNameEnter} onClick={()=>onBtnInsertNameClick()}>
-                    <span>Enter</span>
-                </button>
+                <Button value={'Enter'}
+                        disabled={false}
+                        name={'NamesEnter'}
+                        id={'button1'}
+                        onClick={()=>onBtnInsertNameClick()}
+                />
+
                 <div className={styles.namesBox}>
                     {names.length > 0 && <span>{`Total ${names.length} ${names.length > 1 ? 'names': 'name'}:`}</span>}
                     {namesList}
-                    <Button value={'Button-text'} disabled={false} name={'testButton'} id={'button1'}/>
-                    <InputText name={'inputText'} placeholder={'Введите текст'} id={'inputText1'}/>
-                    <div>
-                        <Checkbox name={'checkbox'} id={'checkbox'} description={''}/>
-                    </div>
                 </div>
+
             </div>
         </div>
 

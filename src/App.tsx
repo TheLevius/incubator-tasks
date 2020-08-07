@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
-import FirstTask from './components/FirstTask/FirstTask';
-import {BrowserRouter} from 'react-router-dom';
-import SecondTask from './components/SecondTask/SecondTask';
-import ThirdTask from './components/ThirdTask/ThirdTask';
+import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import PreJunior from './components/PreJuniour/PreJunior';
 
 function App(props: any) {
     return (
         <div className="App">
             <BrowserRouter>
-                <FirstTask />
-                <SecondTask />
-                <ThirdTask />
+                <div className='homepage'>
+                    <NavLink to={'/prejunior'}>PreJunior Page</NavLink>
+                </div>
+                <Route path='/prejunior' render={PreJunior}/>
             </BrowserRouter>
         </div>
     );

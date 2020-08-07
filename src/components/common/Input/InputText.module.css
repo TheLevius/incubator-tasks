@@ -1,5 +1,5 @@
 .textInput {
-    margin: 0 0.8rem;
+    margin: 0 0.4rem;
     padding: 0.8rem;
     border: none;
     border-bottom: 0.2rem solid rgba(191, 211, 233, 1);
@@ -11,8 +11,13 @@
     color: rgba(191, 211, 233, 1);
 }
 
+.textInputFilled {
+    color: #fff;
+    border-bottom: 0.2rem solid #fff;
+}
+
 .textInput::placeholder {
-    color: #a1d2e3;
+    color: #dffff8;
     font-size: 1.2rem;
     letter-spacing: 0.05rem;
 }

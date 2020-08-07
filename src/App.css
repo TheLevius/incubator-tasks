@@ -29,6 +29,10 @@
   color: #61dafb;
 }
 
+.homepage {
+  font: normal normal 2rem/1 Roboto, sans-serif;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

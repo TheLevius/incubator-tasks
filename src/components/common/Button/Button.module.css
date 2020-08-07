@@ -1,14 +1,14 @@
 .btn {
     display: inline-block;
-    padding: 1.2rem 1.6rem;
-    margin: 0;
+    padding: 1.2rem 2rem;
+    margin: 0.4rem 1.6rem 0.4rem 0;
     outline: none;
     border: none;
     border-radius: 0.4rem;
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
     background-color: #40b8ea;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
@@ -16,11 +16,33 @@
     position: relative;
 }
 
+.btn.active {
+    background-color: #6edc5f;
+}
+
+.btn.danger {
+    background-color: #ff6464;
+}
+
+.btn.error {
+    background-color: #ff382d;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
 .btn:hover {
-    background-color: #66cdf8;
+    background-color: #3fc6f8;
+}
+.btn.danger:hover {
+    background-color: #ff7983;
 }
 
 .btn:active {
     bottom: -0.1rem;
-    background-color: #a2e9ff;
+}
+
+.btn.danger:active, .btn.error:active {
+    background-color: #ff0000;
 }

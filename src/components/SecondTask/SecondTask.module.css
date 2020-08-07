@@ -23,9 +23,8 @@
 }
 
 .filterTasksColumn {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+
+    margin: 0 auto;
     padding: 0.8rem;
 }
 
@@ -34,19 +33,7 @@
     font: normal 500 2rem/1.5 Roboto, Helvetica, Arial, sans-serif;
 }
 
-.filterTasksColumn > button {
-    flex-basis: 8.8rem;
-    margin-right: 1.6rem;
-    font: normal 400 1.6rem/1.5 Roboto, Helvetica, Arial, sans-serif;
-    color: rgba(82, 117, 156, 0.75);
-    cursor: pointer
-}
-.filterTasksColumn > button:last-child {
-    margin-right: 0;
-}
-
 .filterTasksColumn > button.active {
-    font-weight: 500;
-    color: #fff;
-    color: rgba(82, 117, 156, 1)
+    font-weight: 700;
+    background: #6edc5f;
 }

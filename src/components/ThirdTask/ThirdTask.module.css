@@ -7,13 +7,11 @@
 }
 
 .col {
-    max-width: 20%;
     margin: 0 auto;
 }
 
 .inputName {
     display: inline-block;
-    width: calc(80% - 1.2rem);
     margin-right: 1.2rem;
     padding: 0.4rem 0.8rem;
     box-sizing: border-box;
@@ -24,9 +22,8 @@
 .btnNameEnter {
     display: inline-block;
     box-sizing: border-box;
-    width: 20%;
-    margin: 0;
-    padding: 0.8rem;
+    margin: 0 0.4rem;
+    padding: 1.2rem 1.6rem;
     vertical-align: top;
 }
 

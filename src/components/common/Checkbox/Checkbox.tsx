@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './Checkbox.module.css';
+import { v1 as uuidv1 } from 'uuid';
+import {checkboxPropsType} from '../../../types/entities';
 
-const Checkbox = (props: any) => {
+const Checkbox = ({description = 'enter a description', name = 'one more checkbox', id = uuidv1(), onChange}:checkboxPropsType) => {
         return <div className={'switchWrap'}>
-            <input type='checkbox' id={props.id} className={styles.switch} name={props.name}/>
-            <label htmlFor={props.id}>{props.description}</label>
+            <input type='checkbox' id={id} className={styles.switch} name={name} onChange={onChange}/>
+            <label htmlFor={id}>{description}</label>
         </div>
 }
 

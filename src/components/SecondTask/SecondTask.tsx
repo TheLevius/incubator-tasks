@@ -3,7 +3,8 @@ import styles from './SecondTask.module.css';
 import {useDispatch, useSelector} from 'react-redux';
 import {deleteTaskAC, filterButtonIsActiveAC} from '../../redux/secondTaskReducer';
 import {AppStateType} from '../../redux/store';
-import {PriorityType, TaskPriorityType} from '../../types/entities';
+import {priorityFilterType, PriorityType, TaskPriorityType} from '../../types/entities';
+import Button from '../common/Button/Button';
 
 const SecondTask = (props: any) => {
     let [filterValue, setFilterValue] = useState('All');
@@ -13,7 +14,7 @@ const SecondTask = (props: any) => {
     const tasks = useSelector((state: AppStateType) => state.secondTaskReducer.tasks)
     const priorityFilters = useSelector((state: AppStateType) => state.secondTaskReducer.priorityFilters)
 
-    let filteredTasks = tasks.filter((el) => {
+    let filteredTasks = tasks.filter((el:TaskPriorityType) => {
         return filterValue === 'All'
             ? el
             : el.priority === filterValue
@@ -25,7 +26,7 @@ const SecondTask = (props: any) => {
                 <li className={styles.myTask} key={t.id}>
                     <span>{`Priority: '${t.priority}' `}</span>
                     <span>{`Task: '${t.task}' `}</span>
-                    <input type='button' value='x' onClick={() => (dispatch(deleteTaskAC(t.id)))}/>
+                    <Button value={'x'} danger={true} onClick={()=>(dispatch((deleteTaskAC(t.id))))}/>
                 </li>
             )
 
@@ -36,10 +37,11 @@ const SecondTask = (props: any) => {
         dispatch(filterButtonIsActiveAC(priority))
     }
 
-    let MyFilterButtons = priorityFilters.map((b:any, index: number) => {
+    let MyFilterButtons = priorityFilters.map((b: priorityFilterType, index: number) => {
         return b.isActive
-            ? <button key={index} onClick={() => onFilterBtnClick(b.priority)} className={styles.active}>{b.priority}</button>
-            : <button key={index} onClick={() => onFilterBtnClick(b.priority)}>{b.priority}</button>
+            ? <Button key={index} onClick={() => onFilterBtnClick(b.priority)} active={b.isActive} value={b.priority}/>
+            : <Button key={index} onClick={() => onFilterBtnClick(b.priority)} value={b.priority} />
+
     });
 
 
