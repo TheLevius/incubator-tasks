@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import { Route, NavLink, HashRouter } from 'react-router-dom';
 import PreJunior from './components/PreJuniour/PreJunior';
+import Header from './components/Header/Header';
 
 function App(props: any) {
     return (
         <div className="App">
-            <BrowserRouter>
-                <div className='homepage'>
-                    <NavLink to={'/prejunior'}>PreJunior Page</NavLink>
-                </div>
+            <HashRouter>
+                <Header />
                 <Route path='/prejunior' render={PreJunior}/>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }

@@ -1,0 +1,21 @@
+.menuBox {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem 16% 0.8rem 0;
+    background-color: #e1302a;
+    color: #fff;
+    text-align: right;
+}
+
+.menuItem {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    font: normal 500 1.6rem/1 Roboto, sans-serif;
+}
+.menuItem:last-child {
+    padding-right: 0;
+}
+
+.menuItem > a {
+    color: #fff;
+}

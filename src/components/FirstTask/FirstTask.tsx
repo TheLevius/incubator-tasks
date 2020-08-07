@@ -6,10 +6,9 @@ import {AppStateType} from '../../redux/store';
 
 export const FirstTask = () => {
 
-
     const users = useSelector((state:AppStateType) => state.firstTaskReducer.users)
-
     const user = users[0];
+
     return (
         <div className={styles.wrap}>
             <div className={styles.box}>

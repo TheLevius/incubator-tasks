@@ -1,8 +1,8 @@
 .textInput {
-    margin: 0 0.4rem;
+    margin: 0.4rem;
     padding: 0.8rem;
     border: none;
-    border-bottom: 0.2rem solid rgba(191, 211, 233, 1);
+    border-bottom: 0.2rem solid rgba(201, 222, 244, 0.99);
     outline: none;
     background: none;
     transition: 0.4s;
@@ -17,7 +17,8 @@
 }
 
 .textInput::placeholder {
-    color: #dffff8;
+    color: rgba(201, 222, 244, 0.99);
+    text-shadow: 0 0 0.2rem rgba(50, 50, 50, 0.5);
     font-size: 1.2rem;
     letter-spacing: 0.05rem;
 }
