@@ -19,3 +19,6 @@
 .menuItem > a {
     color: #fff;
 }
+.menuItem > a.activeLink {
+    font-weight: 800;
+}

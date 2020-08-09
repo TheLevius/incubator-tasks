@@ -35,28 +35,29 @@ const ThirdTask = () => {
     const namesList = names.map(n => (<span key={n.id}>{n.name}</span>));
 
     return <div className={styles.wrap}>
-            <div className={styles.col}>
+        <div className={styles.col}>
+            <InputText name={'inputText'}
+                       value={name}
+                       placeholder={'Введите текст'}
+                       id={'inputText1'}
+                       classProps={`${styles.inputName}`}
+                       onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                           e.charCode === 13 && onBtnInsertNameClick()
+                       }}
+                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
 
-                <InputText name={'inputText'}
-                           value={name}
-                           placeholder={'Введите текст'}
-                           id={'inputText1'}
-                           classProps={`${styles.inputName}`}
-                           onKeyPress={(e:React.KeyboardEvent<HTMLInputElement>) => { e.charCode === 13 && onBtnInsertNameClick() }}
-                           onChange={(e:React.ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
+            />
+            <Button value={'Enter'}
+                    disabled={false}
+                    name={'NamesEnter'}
+                    id={'button1'}
+                    onClick={() => onBtnInsertNameClick()}
+            />
 
-                />
-                <Button value={'Enter'}
-                        disabled={false}
-                        name={'NamesEnter'}
-                        id={'button1'}
-                        onClick={()=>onBtnInsertNameClick()}
-                />
-
-                <div className={styles.namesBox}>
-                    {names.length > 0 && <span>{`Total ${names.length} ${names.length > 1 ? 'names': 'name'}:`}</span>}
-                    {namesList}
-                </div>
+            <div className={styles.namesBox}>
+                {names.length > 0 && <span>{`Total ${names.length} ${names.length > 1 ? 'names' : 'name'}:`}</span>}
+                {namesList}
+            </div>
 
             </div>
         </div>

@@ -14,7 +14,7 @@ export type initialStateType = {
 }
 
 const initialState = {
-    menuItems: [{name: 'Home', link: '/'}, {name: 'PreJunior', link: '/prejunior'}, {name: 'Junior', link: '/junior'}, {name: 'Junior+', link: '/junior+'}]
+    menuItems: [{name: 'PreJunior', link: '/prejunior'}, {name: 'Junior', link: '/junior'}, {name: 'Junior+', link: '/junior+'}]
 }
 
 type actionsType = addMenuItemACType;

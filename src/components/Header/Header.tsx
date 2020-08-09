@@ -9,8 +9,7 @@ const Header = () => {
 
     const menu = menuItems.map(item => {
         return(
-
-            <li className={styles.menuItem}><NavLink to={`${item.link}`}>{item.name}</NavLink></li>
+            <li className={styles.menuItem}><NavLink to={`${item.link}`} activeClassName={styles.activeLink}>{item.name}</NavLink></li>
         )
     })
 
