@@ -6,7 +6,12 @@ type InitialStateType = {
 
 const initialState: InitialStateType = {
     users: [
-        {id: 1, name: 'Artem', msg: 'npm start нажимал?', date: '20:00'}
+        {
+            id: 1,
+            name: 'Artem',
+            msg: 'npm start нажимал?',
+            date: '20:00',
+        },
     ]
 }
 

@@ -24,10 +24,10 @@ export const FourthTask = () => {
     return(
         <div className={sytles.wrap}>
             <div>
-                <InputText value={state.inputContent} onChange={(e: React.ChangeEvent<HTMLInputElement>)=>{onInputChanged(String(e.currentTarget.value))}} />
+                <InputText value={state.inputContent} onChange={(e) => onInputChanged(e.currentTarget.value)}/>
             </div>
-            <Button value={'Demo button'} />
-            <Checkbox onChange={(e: React.ChangeEvent<HTMLInputElement>) => {onCheckboxChanged(e.currentTarget.checked)}} checked={state.checkboxStatus}/>
+            <Button value={'Demo button'}/>
+            <Checkbox onChange={(e) => {onCheckboxChanged(e.currentTarget.checked)}} checked={state.checkboxStatus}/>
             <p>{state.checkboxStatus}</p>
         </div>
     )

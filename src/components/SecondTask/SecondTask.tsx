@@ -11,8 +11,7 @@ const SecondTask = (props: any) => {
 
     const dispatch = useDispatch()
 
-    const tasks = useSelector((state: AppStateType) => state.secondTaskReducer.tasks)
-    const priorityFilters = useSelector((state: AppStateType) => state.secondTaskReducer.priorityFilters)
+    const {tasks, priorityFilters} = useSelector((state: AppStateType) => state.secondTaskReducer)
 
     let filteredTasks = tasks.filter((el:TaskPriorityType) => {
         return filterValue === 'All'
@@ -38,6 +37,7 @@ const SecondTask = (props: any) => {
     }
 
     let MyFilterButtons = priorityFilters.map((b: priorityFilterType, index: number) => {
+        debugger
         return b.isActive
             ? <Button key={index} onClick={() => onFilterBtnClick(b.priority)} active={b.isActive} value={b.priority}/>
             : <Button key={index} onClick={() => onFilterBtnClick(b.priority)} value={b.priority} />

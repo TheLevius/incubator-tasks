@@ -1,18 +1,15 @@
-.switchWrap {
-
-}
 
 .switch {
     display: none;
 }
-.switch + label {
+label {
     cursor: pointer;
     position: relative;
     font-family: tahoma, sans-serif, arial;
     line-height: 3.2rem;
     padding-left: 5.2rem;
 }
-.switch + label::before {
+label::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -27,12 +24,12 @@
     border-radius: 1.2rem;
     background: #dddddd;
 }
-.switch + label::before,
-.switch + label::after {
+label::before,
+label::after {
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
-.switch + label::after {
+label::after {
     content: "";
     display: block;
     position: absolute;

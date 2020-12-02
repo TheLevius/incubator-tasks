@@ -36,22 +36,18 @@ const ThirdTask = () => {
 
     return <div className={styles.wrap}>
         <div className={styles.col}>
-            <InputText name={'inputText'}
-                       value={name}
+            <InputText value={name}
                        placeholder={'Введите текст'}
-                       id={'inputText1'}
                        classProps={`${styles.inputName}`}
                        onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                           e.charCode === 13 && onBtnInsertNameClick()
+                           e.key === 'Enter' && onBtnInsertNameClick()
                        }}
                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
 
             />
             <Button value={'Enter'}
                     disabled={false}
-                    name={'NamesEnter'}
-                    id={'button1'}
-                    onClick={() => onBtnInsertNameClick()}
+                    onClick={onBtnInsertNameClick}
             />
 
             <div className={styles.namesBox}>

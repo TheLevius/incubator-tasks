@@ -1,17 +1,22 @@
-import React from 'react';
+import React, {ChangeEvent, KeyboardEventHandler} from 'react';
 import styles from './InputText.module.css';
-import { v1 as uuidv1 } from 'uuid';
 
-const InputText = ({value, id = uuidv1(), placeholder = 'enter a value', name = 'one more textarea', ...props}: any) => {
+export type inputTextPropsType = {
+    placeholder?: string
+    value?: string | undefined
+    classProps?: string
+    onKeyPress?: KeyboardEventHandler
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void
+}
+
+const InputText: React.FC<inputTextPropsType> = (props) => {
 
     return <input type='text'
+                  value={props.value}
+                  placeholder={props.placeholder}
                   onKeyPress={props.onKeyPress}
                   onChange={props.onChange}
-                  name={name}
-                  placeholder={placeholder}
-                  className={`${styles.textInput} ${value.length && styles.textInputFilled} ${props.classProps}`}
-                  id={id}
-                  value={value}
+                  className={`${styles.textInput} ${props.value && styles.textInputFilled} ${props.classProps}`}
     />
 
 }
