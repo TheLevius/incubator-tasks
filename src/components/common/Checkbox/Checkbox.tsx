@@ -10,7 +10,7 @@ export type checkboxPropsType = {
     checked: boolean
 }
 
-const Checkbox = ({description = 'enter a description',  id = uuidv1(), onChange}:checkboxPropsType) => {
+const Checkbox: React.FC<checkboxPropsType> = ({description = 'enter a description',  id = uuidv1(), onChange}) => {
     const [state, setState] = useState({
         inputContent: '',
         checkboxStatus: false,

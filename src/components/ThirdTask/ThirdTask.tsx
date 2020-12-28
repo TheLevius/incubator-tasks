@@ -11,13 +11,13 @@ const ThirdTask = () => {
 
     const dispatch = useDispatch();
 
-    let[name, setName] = useState<string>('');
+    const[name, setName] = useState<string>('');
 
     const names: ({name: string, id: string})[] = useSelector((state: AppStateType) => state.thirdTaskReducer.names)
 
 
-    const onInputNameChanged = (name:string):void => {
-        setName(name);
+    const onInputNameChanged = (e: ChangeEvent<HTMLInputElement>):void => {
+        setName(e.currentTarget.value);
     }
 
     const onBtnInsertNameClick = ():void => {
@@ -42,7 +42,8 @@ const ThirdTask = () => {
                        onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
                            e.key === 'Enter' && onBtnInsertNameClick()
                        }}
-                       onChange={(e: React.ChangeEvent<HTMLInputElement>) => onInputNameChanged(String(e.currentTarget.value))}
+                       onChange={onInputNameChanged}
+                       onBlur={onBtnInsertNameClick}
 
             />
             <Button value={'Enter'}

@@ -7,9 +7,9 @@ import {NavLink} from 'react-router-dom';
 const Header = () => {
     const menuItems = useSelector((state: AppStateType) => (state.headerReducer.menuItems))
 
-    const menu = menuItems.map(item => {
+    const menu = menuItems.map((item, i) => {
         return(
-            <li className={styles.menuItem}><NavLink to={`${item.link}`} activeClassName={styles.activeLink}>{item.name}</NavLink></li>
+            <li key={String(i)} className={styles.menuItem}><NavLink to={`${item.link}`} activeClassName={styles.activeLink}>{item.name}</NavLink></li>
         )
     })
 

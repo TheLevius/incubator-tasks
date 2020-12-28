@@ -17,14 +17,17 @@ export const FirstTask = () => {
                 </div>
                 <div className={styles.colMsg}>
                     <div className={styles.mountMsg}>
-                        <h3 className={styles.userName}>{user.name}</h3>
-                        <span className={styles.msg}>
+                        <div className={styles.mountBox}>
+                            <h3 className={styles.userName}>{user.name}</h3>
+                            <span className={styles.msg}>
                             {user.msg}
-                        </span>
-                        <div className={styles.boxDate}>
-                            <span>{user.date}</span>
+                            </span>
+                            <div className={styles.boxDate}>
+                                <span>{user.date}</span>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

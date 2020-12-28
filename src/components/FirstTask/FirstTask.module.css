@@ -14,7 +14,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-end;
-    min-height: 10rem;
     padding: 1.2rem;
     background-color: #e4e4e4;
     text-align: left;
@@ -52,9 +51,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: stretch;
     min-width: 29.6rem;
-    min-height: 7.8rem;
+    min-height: 5.2rem;
     padding: 0.8rem 1.2rem;
     border-radius: 0.8rem 0.8rem 0.8rem 0;
     background-color: rgba(131, 217, 255, 0.8);
@@ -71,7 +70,12 @@
     border-left: 0.8rem solid transparent;
 }
 
+.mountBox {
+    overflow: hidden;
+}
+
 .userName {
+    padding-bottom: 0.4rem;
     font-size: 1.6rem;
     line-height: 1;
     font-weight: 600;
@@ -82,14 +86,18 @@
     font-size: 1.6rem;
     line-height: 1.2;
     color: #f2f2f2;
+    display: inline;
 }
 
 .boxDate {
-    align-self: flex-end;
-    padding-top: 0.4rem;
+    float: right;
+    padding-top: 0.8rem;
+    padding-left: 0.8rem;
+    text-align: right;
+
 }
 .boxDate > span {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 1;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
 }

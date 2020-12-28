@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import sytles from './FourthTask.module.css';
 import Checkbox from '../common/Checkbox/Checkbox';
 import Button from '../common/Button/Button';
@@ -6,28 +6,26 @@ import InputText from '../common/Input/InputText';
 
 export const FourthTask = () => {
 
-    let [state, setState] = useState({
+    const [state, setState] = useState({
             inputContent: '',
             checkboxStatus: false
     });
 
-    const onInputChanged = (value: string):void => {
-        setState({...state, inputContent: value})
+    const onInputChanged = (e: ChangeEvent<HTMLInputElement>):void => {
+        setState({...state, inputContent: e.currentTarget.value})
     }
 
-    const onCheckboxChanged = (checked: boolean):void => {
-        checked
-            ? setState({...state, checkboxStatus: true})
-            : setState({...state, checkboxStatus: false})
+    const onCheckboxChanged = (e:ChangeEvent<HTMLInputElement>):void => {
+        setState({...state, checkboxStatus: e.currentTarget.checked})
     }
 
     return(
         <div className={sytles.wrap}>
             <div>
-                <InputText value={state.inputContent} onChange={(e) => onInputChanged(e.currentTarget.value)}/>
+                <InputText value={state.inputContent} onChange={onInputChanged} placeholder={'Enter a value'}/>
             </div>
             <Button value={'Demo button'}/>
-            <Checkbox onChange={(e) => {onCheckboxChanged(e.currentTarget.checked)}} checked={state.checkboxStatus}/>
+            <Checkbox onChange={onCheckboxChanged} checked={state.checkboxStatus}/>
             <p>{state.checkboxStatus}</p>
         </div>
     )

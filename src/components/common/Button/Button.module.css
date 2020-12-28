@@ -8,7 +8,7 @@
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
     background-color: #40b8ea;
     color: #fff;
-    font-weight: 400;
+    font: normal 500 1.4rem/1 Roboto, Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;

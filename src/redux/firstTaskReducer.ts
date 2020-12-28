@@ -8,9 +8,9 @@ const initialState: InitialStateType = {
     users: [
         {
             id: 1,
-            name: 'Artem',
-            msg: 'npm start нажимал?',
-            date: '20:00',
+            name: 'Жмышенко Валерий',
+            msg: 'Жмых, ты npm start нажимал?',
+            date: '12:54',
         },
     ]
 }

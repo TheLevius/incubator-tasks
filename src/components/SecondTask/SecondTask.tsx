@@ -36,8 +36,7 @@ const SecondTask = (props: any) => {
         dispatch(filterButtonIsActiveAC(priority))
     }
 
-    let MyFilterButtons = priorityFilters.map((b: priorityFilterType, index: number) => {
-        debugger
+    const MyFilterButtons = priorityFilters.map((b: priorityFilterType, index: number) => {
         return b.isActive
             ? <Button key={index} onClick={() => onFilterBtnClick(b.priority)} active={b.isActive} value={b.priority}/>
             : <Button key={index} onClick={() => onFilterBtnClick(b.priority)} value={b.priority} />
